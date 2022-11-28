@@ -6,7 +6,8 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-@Repository
+// 중복 빈 등록으로 인한 주석처리
+//@Repository
 public class MemoryMemberRepository implements MemberRepository{
     // 실무에서는 동시성 문제가 있을 수 있어서 ConcurrentHashMap을 사용함.
     private static Map<Long, Member> store = new HashMap<>();
